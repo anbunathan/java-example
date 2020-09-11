@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>in.bench.resources</groupId>
+	<artifactId>Jersey-UP-DOWN-Image-File</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>Jersey-UP-DOWN-Image-File</name>
+	<description>Jersey 2.x : an example on JAX-RS Restful web service to upload/download image(.png, .jpeg, .tif) files</description>
+
+	<!-- Jersey repository -->
+	<repositories>
+		<repository>
+			<id>snapshot-repository.java.net</id>
+			<name>Java.net Snapshot Repository for Maven</name>
+			<url>https://maven.java.net/content/repositories/snapshots/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<properties>
+		<jersey.version>2.12</jersey.version>
+		<jersey.scope>compile</jersey.scope>
+		<compileSource>1.8</compileSource>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<finalName>Jersey-UP-DOWN-Image-File</finalName>
+	</build>
+
+	<dependencies>
+		<!-- Jersey core Servlet 2.x implementation -->
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet-core</artifactId>
+			<version>${jersey.version}</version>
+			<scope>${jersey.scope}</scope>
+		</dependency>
+		<dependency>
+    		<groupId>javax.servlet</groupId>
+    		<artifactId>javax.servlet-api</artifactId>
+    		<version>3.0.1</version>
+    		<scope>provided</scope>
+		</dependency>
+		<!-- Jersey Multipart entity providers support module -->
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-multipart</artifactId>
+			<version>${jersey.version}</version>
+			<scope>${jersey.scope}</scope>
+		</dependency>
+	</dependencies>
+</project>
